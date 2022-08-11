@@ -322,7 +322,9 @@
     "development": {
         "watch": {
             "delay": 250
-        }
+        },
+
+        "url_backend": "http://localhost:3200/"
     },
 
     /**

@@ -16,57 +16,7 @@ Ext.define('MiAppSencha.Application', {
     },
 
     launch: function(){
-        var login = Ext.create('Ext.window.Window', {
-
-            // de apariencia
-            title: 'Login',
-            height: 200,
-            width: 350,
-
-            //de comportamiento
-            closable: false,
-            draggable: false,
-            resizable: false,
-            modal: true,
-
-            // del boton
-            buttonAlign: 'center',
-
-            items: [
-                {
-                    xtype: 'form',
-                    bodyPadding: 10,
-
-                    defaults: {
-                        xtype: 'textfield',
-                        allowBlank: false,
-                    },
-                    
-                    items: [
-                        {
-                            fieldLabel: 'Email',
-                            name: 'email',
-                            vtype: 'email'
-                        },
-                        {
-                            fieldLabel: 'Password',
-                            name: 'password',
-                            inputType: 'password'
-                        }
-                    ]
-                }
-            ],
-
-            buttons: [
-                {
-                    text: 'Ingresar',
-                    iconCls: 'x-fa fa-user-ninja',
-                    handler: function(){
-                        login.close();
-                    }
-                }
-            ]
-        });
+        var login = Ext.create('MiAppSencha.view.usuario.Usuario');
 
         login.show();
     },
