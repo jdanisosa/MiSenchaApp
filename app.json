@@ -217,6 +217,10 @@
             {
                 "path": "${framework.dir}/build/ext-all-rtl-debug.js"
             }
+        ],
+
+        "requires": [
+            "ext-locale"
         ]
     },
 
@@ -549,5 +553,7 @@
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "3ff8050d-5a9d-4844-bc0e-59518bf44c2e"
+    "id": "3ff8050d-5a9d-4844-bc0e-59518bf44c2e",
+
+    "locale": "es"
 }

@@ -1,6 +1,6 @@
 Ext.define('MiAppSencha.store.Empresas',{
     extend: 'Ext.data.Store',
-
+    storeId: 'empresas-listado',
     alias: 'store.empresas',
     model: 'MiAppSencha.model.Empresa',
     proxy: {

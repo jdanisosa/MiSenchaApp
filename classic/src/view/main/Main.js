@@ -58,7 +58,6 @@ Ext.define('MiAppSencha.view.main.Main', {
     },
 
     defaults: {
-        bodyPadding: 20,
         tabConfig: {
             responsiveConfig: {
                 wide: {
