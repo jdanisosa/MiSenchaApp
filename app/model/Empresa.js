@@ -4,7 +4,7 @@ Ext.define('MiAppSencha.model.Empresa',{
     fields: [
         {name:"id", type: 'int'},
         "nombre",
-        {name: "fechaInicio", type: 'date', format: 'd-m-Y'},
+        {name: "fechaInicio", type: 'date', format: 'm-d-Y'},
         "horaInicio",
         "direccion"
     ]
