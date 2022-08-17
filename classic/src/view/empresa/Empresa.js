@@ -1,17 +1,9 @@
 Ext.define('MiAppSencha.view.empresa.Empresa', {
-    extend: 'Ext.Panel',
-    layout: 'border',
+    extend: 'MiAppSencha.view.ListadoBase',
     xtype: 'empresa',
     controller: 'empresa',
 
-    tbar: [
-        {
-            //xtype: "button",
-            text: "Agregar empresa",
-            iconCls: "x-fa fa-plus",
-            handler: 'mostrarFormulario'
-        }
-    ],
+    leyenda: 'empresa',
 
     items: [
         {

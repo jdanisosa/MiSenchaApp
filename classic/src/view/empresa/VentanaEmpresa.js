@@ -1,17 +1,10 @@
 Ext.define('MiAppSencha.view.empresa.VentanaEmpresa', {
-    extend: 'Ext.window.Window',
+    extend: 'MiAppSencha.view.FormBase',
     controller: 'empresa',
 
     title: 'Agregar una nueva empresa',
-    height: 300,
-    width: 400,
 
-    modal: true,
-    draggable: false,
-    resizable: false,
-
-    buttonAlign: 'center',
-
+    
     layout: {
         type: 'vbox',
         align: 'middle'
@@ -65,16 +58,4 @@ Ext.define('MiAppSencha.view.empresa.VentanaEmpresa', {
             ]
         }
     ],
-
-    buttons: [
-        {
-            text: 'Enviar',
-            handler: 'enviarDatos'
-        }
-    ],
-
-    listeners: {
-        close: 'reloadStore',
-        show: 'llenarDatos'
-    }
 })
