@@ -36,12 +36,18 @@ Ext.define('MiAppSencha.view.empresa.VentanaEmpresa', {
 
             items: [
                 {
+                    name: 'id',
+                    itemId: 'id',
+                    hidden: true,
+                    allowBlank: true,
+                },
+                {
                     fieldLabel: 'Nombre',
                     name: 'nombre'
                 },
                 {
                     xtype: 'datefield',
-                    format: 'd/m/Y',
+                    format: 'm/d/Y',
                     fieldLabel: 'Fecha de Inicio',
                     name: 'fechaInicio',
                     maxValue: new Date(),
@@ -68,6 +74,7 @@ Ext.define('MiAppSencha.view.empresa.VentanaEmpresa', {
     ],
 
     listeners: {
-        close: 'reloadStore'
+        close: 'reloadStore',
+        show: 'llenarDatos'
     }
 })
