@@ -20,6 +20,12 @@ Ext.define('MiAppSencha.view.empleado.VentanaEmpleado',{
 
             items: [
                 {
+                    name: "id",
+                    itemId: "id",
+                    hidden: true,
+                    allowBlank: true,
+                },
+                {
                     fieldLabel: 'Nombre',
                     name: 'nombre',
                     itemId: 'nombre'
