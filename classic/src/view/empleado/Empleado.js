@@ -17,6 +17,26 @@ Ext.define('MiAppSencha.view.empleado.Empleado',{
                 {text: 'Apellido', dataIndex: 'apellido', align: 'center',  flex: 1},
                 {text: 'Email', dataIndex: 'email', align: 'center',  flex: 2},
                 {text: 'Direccion', dataIndex: 'direccion', align: 'center',  flex: 1},
+                {
+                    text: "Acciones",
+                    align: "center",
+                    xtype: "actioncolumn",
+
+                    items: [{
+                        iconCls: 'x-fa fa-edit',
+                        tooltip: 'Editar',
+                        handler: function(grid, rowIndex){
+                            this.fireEvent("editar", grid, rowIndex)
+                        }
+                    },'->',
+                    {
+                        iconCls: 'x-fa fa-trash',
+                        tooltip: 'Eliminar',
+                        handler: function(grid, rowIndex){
+                            this.fireEvent("eliminar", grid, rowIndex)
+                        }
+                    }]
+                }
             ]
         }
     ]
