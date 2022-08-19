@@ -311,7 +311,8 @@
         },
         "compressor": {
             "type": "yui"
-        }
+        },
+        "url_backend": "https://shrouded-tundra-21566.herokuapp.com/"
     },
 
     /**
