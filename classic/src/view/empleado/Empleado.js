@@ -11,6 +11,7 @@ Ext.define('MiAppSencha.view.empleado.Empleado',{
             xtype: 'grid',
             store: {type: 'empleados'},
             title: 'Empleados',
+
             columns:[
                 {text: 'Id', dataIndex: 'id', align: 'center'},
                 {text: 'Nombre', dataIndex: 'nombre', align: 'center', flex: 1},
@@ -37,7 +38,38 @@ Ext.define('MiAppSencha.view.empleado.Empleado',{
                         }
                     }]
                 }
-            ]
+            ],
+
+            listeners: {
+
+                itemcontextmenu: function (grid, record, item, Index, e) {
+                    
+                    var contextMenu = Ext.create('Ext.menu.Menu', {
+                        controller: 'empleado',
+                       items: 
+                       [
+                            {
+                                text: 'Editar',
+                                itemId: 'editar',
+                                iconCls: 'x-fa fa-edit',
+                                handler: function () {
+                                    this.fireEvent("editar", grid, Index)
+                                }
+                            },
+                            {
+                                text: 'Eliminar',
+                                iconCls: 'x-fa fa-trash',
+                                handler: function () {
+                                    this.fireEvent("eliminar", grid, rowIndex)
+                                }
+                            }   
+                        ]
+                    });
+                  
+                    contextMenu.showAt(e.getXY());
+                    e.stopEvent();
+                }
+              }
         }
     ]
 });

@@ -93,7 +93,7 @@ Ext.define('MiAppSencha.view.empleado.EmpleadoController',{
     },
 
     control: {
-        actioncolumn:{
+        '#editar':{
             editar: "onEditar",
             eliminar: "onEliminar"
         }
